@@ -13,4 +13,4 @@
 - https://fontawesome.com/search
 
 ## Hosted URL
-- 
+- https://khayamhawari.netlify.app/
