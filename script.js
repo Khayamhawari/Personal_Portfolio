@@ -118,9 +118,9 @@ form.addEventListener("submit", (e) => {
 
 
 // contextmenu hide from website looks like professional
-// document.addEventListener("contextmenu", (c)=>{
-//    c.preventDefault();
-// },false)
+document.addEventListener("contextmenu", (c)=>{
+   c.preventDefault();
+},false)
 
 // swiper js slide service cards
 const swiperCards = new Swiper(".sevices-inner", {
