@@ -10,14 +10,103 @@ body {
     background: var(--primary-bg-color);
     color: var(--text-color);
     font-family: 'Poppins', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    text-align: center;
     overflow-x: hidden;
 }
 
 a {
+    color: var(--White);
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* nav bar section start from here  */
+
+#pop-up-menu {
+    display: flex;
+}
+
+#pop-up-menu ul {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-menu {
+    cursor: pointer;
+    transition: 0.4s ease;
+}
+
+.nav-menu:hover {
     color: var(--main-color);
+}
+
+
+
+.nav-menu:hover i {
+    transform: rotate(180deg);
+}
+
+@keyframes drop-down {
+    0% {
+        top: 16%;
+        background-color: none;
+    }
+
+    100% {
+        top: 70%;
+        /* background-color: var(--card-color); */
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+}
+
+.pop {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 10;
+    padding: 10px 0 11px 0;
+    top: 70%;
+    animation-name: drop-down;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    width: 225px;
+}
+
+.nav-menu:hover .pop {
+    display: flex;
+}
+
+.pop li a {
+    line-height: 1.6;
+    transition: 0.3s ease;
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+.pop li a:hover {
+    color: var(--main-color);
+}
+
+.pop li {
+    padding: 9px 45px 9px 17px;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.pop li:last-child {
+    padding: 9px 45px 9px 17px;
+    border-bottom: none;
+}
+
+.theme-icon {
+    height: 20px;
+}
+
+
+/* main section start from here  */
+
+.main-heading {
+    margin-top: 120px;
+    text-align: center;
 }
