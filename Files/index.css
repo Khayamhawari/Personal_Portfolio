@@ -763,11 +763,95 @@ span {
     font-size: 20px;
 }
 
+/* marquee animation section start from here  */
+.feature-section {
+    padding: 55px 150px 50px;
+}
+
+.spc-heading {
+    color: var(--text-color);
+}
+
+.content-div {
+    background-color: var(--card-color);
+    padding: 8px 20px;
+    width: 370px;
+}
+
+.moving-div {
+    padding-inline: 160px;
+    display: flex;
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.moving-div .move {
+    /* padding: 145px; */
+    padding-block: 18px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    /* overflow: hidden; */
+    animation: moveii 21s linear infinite reverse;
+}
+
+.spc-margin {
+    margin-left: 50px;
+}
+
+.moving-div .move h4 {
+    color: var(--text-color);
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: 600;
+    padding-top: 10px;
+}
+
+.moving-div .move p {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    padding-bottom: 10px;
+}
+
+.moving-div .move img {
+    height: 70px;
+}
+
+@keyframes moveii {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.blur-left {
+    position: absolute;
+    top: 0;
+    left: -14%;
+    background: linear-gradient(to right, #030712, transparent);
+    height: 100%;
+    width: 10%;
+    z-index: 2;
+}
+
+.blur-right {
+    position: absolute;
+    top: 0;
+    right: -14%;
+    background: linear-gradient(to right, transparent, #030712);
+    height: 100%;
+    width: 10%;
+    z-index: 2;
+}
+
 /* Contact section start */
 
 .contact {
     min-height: auto;
-    background: var(--primary-bg-color);
+    background: var(--secondary-bg-color);
     color: var(--text-color);
 }
 
@@ -843,7 +927,7 @@ input:focus {
 }
 
 .footer-section {
-    background: var(--secondary-bg-color);
+    background: var(--primary-bg-color);
     color: var(--text-color);
     padding: 30px;
     position: relative;
