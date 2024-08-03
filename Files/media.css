@@ -16,6 +16,15 @@
     .my-image img {
         height: 400px;
     }
+
+    .blur-left {
+        left: -20%;
+    }
+    
+    .blur-right {
+        right: -20%;
+    }
+    
 }
 
 @media screen and (max-width: 840px) {
@@ -127,6 +136,14 @@
         margin-top: 55px;
     }
 
+    .blur-left {
+        left: -31%;
+    }
+    
+    .blur-right {
+        right: -31%;
+    }
+
 }
 
 @media screen and (max-width: 768px) {
@@ -223,6 +240,18 @@
     .heading {
         font-size: 2.50rem;
     }
+
+    .blur-left {
+        left: -33%;
+    }
+    
+    .blur-right {
+        right: -33%;
+    }
+
+    .spc-heading {
+        font-size: 2rem;
+    }
 }
 
 @media screen and (max-width: 530px) {
@@ -243,8 +272,8 @@
     }
 
     .education {
-        padding-left: 50px;
-        padding-right: 50px;
+        padding-left: 35px;
+        padding-right: 35px;
     }
 
     .education-content::before {
@@ -254,6 +283,22 @@
     .all-image-container {
         grid-template-columns: repeat(3, minmax(0, 1fr));
         gap: 25px;
+    }
+
+    .feature-section {
+        padding: 55px 100px 50px;
+    }
+
+    .blur-left {
+        left: -32%;
+    }
+    
+    .blur-right {
+        right: -34%;
+    }
+
+    .spc-heading {
+        font-size: 1.80rem;
     }
 }
 
@@ -359,6 +404,18 @@
     .footer-social {
         justify-content: flex-start;
     }
+
+    .feature-section {
+        padding: 55px 60px 50px;
+    }
+
+    .blur-left {
+        left: -19%;
+    }
+    
+    .blur-right {
+        right: -19%;
+    }
 }
 
 @media screen and (max-width: 455px) {
@@ -455,7 +512,7 @@
     }
 
     .education-content::before {
-        left: -3.5%;
+        left: -3.1%;
     }
 
     .content h3 {
@@ -531,6 +588,14 @@
 
     .subfooter h4 {
         font-size: 0.9rem;
+    }
+
+    .blur-right {
+        right: -14%;
+    }
+
+    .spc-heading {
+        font-size: 1.60rem;
     }
 
 }

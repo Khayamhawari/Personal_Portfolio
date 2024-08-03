@@ -208,6 +208,11 @@ header {
        flex-direction: column;
     }
 
+    .pop {
+        position: static;
+        margin-top: 5px;
+    }
+
     /* #theme-icon {
         margin-top: -18px;
     } */
@@ -215,4 +220,33 @@ header {
     /* .main-nav a {
         margin-top: -15px;
     } */
+}
+
+@media screen and (max-width: 530px) {
+    header {
+        padding: 10px 30px;
+    }
+
+    .logo {
+        font-size: 1.40rem;
+    }
+
+    .box-icon div {
+        width: 31px;
+    }
+
+    .main-heading{
+        font-size: 1.60rem;
+        margin-top: 88px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    header {
+        padding: 10px 25px;
+    }
+
+    .main-heading{
+        font-size: 1.50rem;
+    }
 }
