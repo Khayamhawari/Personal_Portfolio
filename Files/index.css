@@ -847,6 +847,14 @@ span {
     z-index: 2;
 }
 
+.whatsapp-color {
+  color: #25D366;
+}
+
+.linkedin-color {
+    color: #0077B5;
+}
+
 /* Contact section start */
 
 .contact {
