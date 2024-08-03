@@ -4,9 +4,11 @@
 - HTML5
 - CSS3
 - JavaScript 
-- JavaScript Libraries
+- Swiper JS
+- Sweet Alert JS
+- SMTP JS
 
-## For Font 
+## For Fonts
 - https://fonts.google.com/?query=poppins
 
 ## For Icons
