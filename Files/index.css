@@ -855,6 +855,12 @@ span {
     color: #0077B5;
 }
 
+.insta-color {
+    /* background: linear-gradient(180deg, #405DE6, #5851D5, #833AB4, #C13584, #E1306C, #FD1D1D); */
+    /* background: linear-gradient(to right, #C13584, #6228d7); */
+    color: #C13584;
+}
+
 /* Contact section start */
 
 .contact {
