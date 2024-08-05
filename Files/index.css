@@ -792,7 +792,7 @@ span {
     align-items: center;
     gap: 50px;
     /* overflow: hidden; */
-    animation: moveii 21s linear infinite reverse;
+    animation: moveii 35s linear infinite reverse;
 }
 
 .spc-margin {
