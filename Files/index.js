@@ -161,12 +161,16 @@ const themeIcon = document.getElementById('theme-icon');
 const header = document.getElementById('header');
 const imageChange = document.getElementById('change-image');
 const titles = document.getElementById('title');
+const blurRight = document.getElementById('blur-right');
+const blurLeft = document.getElementById('blur-left');
 
 const enableLightTheme = () => {
   document.body.classList.add('light-theme');
   themeIcon.src = 'Assets/moon.png';
   header.style.backgroundColor = 'rgba(255, 255, 255, 0.507)';
   imageChange.src = 'Assets/lightprofile.png';
+  blurLeft.style.background = 'linear-gradient(to right, #ffffff, transparent)';
+  blurRight.style.background = 'linear-gradient(to right, transparent, #ffffff)';
   // titles.style.color = '#111827';
   localStorage.setItem('lightMode', 'enable');
 }
@@ -176,6 +180,8 @@ const disableLightTheme = () => {
   themeIcon.src = 'Assets/sun.png';
   header.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
   imageChange.src = 'Assets/darkprofile.png';
+  blurLeft.style.background = 'linear-gradient(to right, #030712, transparent)';
+  blurRight.style.background = 'linear-gradient(to right, transparent, #030712)';
   // titles.style.color = '#f9fafb';
   localStorage.setItem('lightMode', 'disable');
 }
