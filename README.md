@@ -1,4 +1,4 @@
-# Khayam Hawari's Portfolio (Personal Portfolio)
+# Khayam Hawari's Portfolio (Personal Portfolio Website)
 
 ## Technologies Used 
 - HTML5
