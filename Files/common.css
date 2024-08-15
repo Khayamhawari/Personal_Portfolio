@@ -144,6 +144,7 @@ header {
     #open-menu {
         display: block;
     }
+
     .box-icon div {
         position: relative;
         width: 35px;
@@ -205,7 +206,7 @@ header {
     }
 
     #pop-up-menu {
-       flex-direction: column;
+        flex-direction: column;
     }
 
     .pop {
@@ -235,9 +236,26 @@ header {
         width: 31px;
     }
 
-    .main-heading{
+    .main-heading {
         font-size: 1.60rem;
         margin-top: 88px;
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .main-footer h2 {
+        font-size: 1.50rem;
+        text-align: start;
+    }
+
+    .footer-links {
+        gap: 15px;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+    }
+    .footer-social {
+        justify-content: flex-start;
     }
 }
 
@@ -246,7 +264,24 @@ header {
         padding: 10px 25px;
     }
 
-    .main-heading{
+    .main-heading {
         font-size: 1.50rem;
+    }
+
+    .footer-links a {
+        font-size: 0.9rem;
+    }
+
+    .footer-social h3 {
+        font-size: 1rem;
+    }
+
+    .footer-social a {
+        font-size: 1.20rem;
+    }
+
+    .footer-social a i {
+        height: 41px;
+        width: 41px;
     }
 }

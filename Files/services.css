@@ -1,16 +1,47 @@
 @import "./colors.css";
 @import "./fonts.css";
 
-body, html {
+body,
+html {
     height: 100vh;
     width: 100%;
 }
 
 body {
+    /* background-image: url(https://images.unsplash.com/photo-1633719996322-b42b6a2c96ad?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
     background: var(--primary-bg-color);
     color: var(--text-color);
-    font-family: 'Poppins', sans-serif;
+    font-family: "Poppins", sans-serif;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body::before {
+    /* content: '';
+    position: fixed;
+    top: 32%;
+    left: 89%;
+    width: 60px;
+    border-radius: 50%;
+    height: 60px;
+    background: linear-gradient(#f00, #f0f); */
+    /* clip-path: circle(30% at right 70%); */
+}
+
+body::after {
+    /* content: '';
+    position: fixed;
+    top: 85%;
+    right: 89%;
+    width: 60px;
+    border-radius: 50%;
+    height: 60px;
+    z-index: -1;
+    background: linear-gradient(#2196f3, #1161a3); */
+    /* clip-path: circle(30% at 10% 10%); */
 }
 
 a {
@@ -20,6 +51,19 @@ a {
 
 li {
     list-style: none;
+}
+
+/* utility classes  */
+
+.container {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
 }
 
 /* nav bar section start from here  */
@@ -101,16 +145,93 @@ li {
     height: 20px;
 }
 
-
 /* main section start from here  */
-
 .main-heading {
     margin-top: 120px;
     text-align: center;
+    font-size: 2rem;
+}
+
+.spc-padding {
+    padding-inline: 35px;
+}
+
+.webdev-outer .webdev-inner h2 {
+    font-size: 1.6rem;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+.webdev-outer .webdev-inner .main-content-div {
+    /* border: 1px solid rgba(255, 255, 255, 0.05);
+    background-color: rgba(255, 255, 255, 0.05); */
+    /* backdrop-filter: blur(20px); */
+    background-color: #182435;
+    margin-top: 20px;
+    padding: 20px 25px;
+    justify-content: space-between;
+    gap: 50px;
+    border-top-left-radius: 22px;
+    border-bottom-right-radius: 50px;
+}
+
+.main-content-div .left-image img {
+    height: 350px;
+    border-top-left-radius: 22px;
+    border-bottom-right-radius: 50px;
+}
+
+.main-content-div .right-text h3 {
+    margin-top: 10px;
+}
+
+.main-content-div .right-text h4 {
+    display: inline-block;
+    padding: 5px 12px;
+    border-radius: 22px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+}
+
+.main-content-div .right-text p {
+    margin-bottom: 30px;
+    margin-top: 8px;
+}
+
+.main-content-div .right-text .service-btn {
+    padding: 8px 18px;
+    background-color: var(--main-color);
+    color: var(--White);
 }
 
 
-@media only screen and (max-width: 840px){
+/* media quires start from here  */
+@media only screen and (max-width: 920px) {
+    .webdev-outer .webdev-inner .main-content-div {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 70px;
+    }
+
+    .webdev-outer .webdev-inner .main-content-div .left-image {
+        width: 100%;
+    }
+
+    .webdev-outer .webdev-inner .main-content-div .left-image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .main-content-div .right-text .service-btn {
+        padding: 8px 60px;
+    }
+}
+
+@media only screen and (max-width: 840px) {
     #open-menu {
         display: block;
     }
@@ -176,7 +297,7 @@ li {
     }
 
     .main-nav a {
-        font-size: 1.50rem;
+        font-size: 1.5rem;
         margin-top: -15px;
     }
 
@@ -188,4 +309,39 @@ li {
     #theme-icon {
         margin-top: -18px;
     }
+}
+
+@media only screen and (max-width: 579px) {
+    .webdev-outer .webdev-inner .main-content-div {
+        padding: 40px 25px;
+    }
+
+    .main-footer h2 {
+        text-align: start;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
+    }
+}
+
+@media only screen and (max-width: 479px) {
+    .webdev-outer .webdev-inner h2 {
+        font-size: 1.20rem;
+    }
+
+    .main-content-div .right-text h4 {
+        font-size: 0.8rem;
+    }
+
+    .main-content-div .right-text p {
+        font-size: 0.9rem;
+    }
+   
 }
