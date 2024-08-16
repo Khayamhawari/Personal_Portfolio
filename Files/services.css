@@ -15,20 +15,20 @@ body {
     scroll-behavior: smooth;
 }
 
-body::before {
-    /* content: '';
+/* body::before {
+    content: '';
     position: fixed;
     top: 32%;
     left: 89%;
     width: 60px;
     border-radius: 50%;
     height: 60px;
-    background: linear-gradient(#f00, #f0f); */
-    /* clip-path: circle(30% at right 70%); */
-}
+    background: linear-gradient(#f00, #f0f);
+    clip-path: circle(30% at right 70%);
+} */
 
-body::after {
-    /* content: '';
+/* body::after {
+    content: '';
     position: fixed;
     top: 85%;
     right: 89%;
@@ -36,9 +36,9 @@ body::after {
     border-radius: 50%;
     height: 60px;
     z-index: -1;
-    background: linear-gradient(#2196f3, #1161a3); */
-    /* clip-path: circle(30% at 10% 10%); */
-}
+    background: linear-gradient(#2196f3, #1161a3);
+    clip-path: circle(30% at 10% 10%);
+} */
 
 a {
     color: var(--White);
