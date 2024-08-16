@@ -209,6 +209,11 @@ header {
         flex-direction: column;
     }
 
+    #pop-up-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .pop {
         position: static;
         margin-top: 5px;
@@ -239,6 +244,19 @@ header {
     .main-heading {
         font-size: 1.60rem;
         margin-top: 88px;
+    }
+    .main-footer h2 {
+        text-align: start;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: start;
+    }
+
+    .footer-social {
+        justify-content: flex-start;
     }
 }
 
