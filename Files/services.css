@@ -188,13 +188,19 @@ li {
     border-radius: 22px;
     font-size: 0.9rem;
     font-weight: 600;
-    background-color: var(--primary-bg-color);
+    border: 1px solid var(--main-color);
+    /* background: transparent; */
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    /* background-color: rgba(255, 255, 255, 0.057); */
+    backdrop-filter: blur(25px);
+    /* background-color: var(--primary-bg-color); */
     color: var(--text-color);
 }
 
 .main-content-div .right-text p {
     margin-bottom: 30px;
     margin-top: 8px;
+    color: var(--normal-color);
 }
 
 .main-content-div .right-text .service-btn {
