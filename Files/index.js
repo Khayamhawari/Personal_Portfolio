@@ -115,12 +115,36 @@ form.addEventListener("submit", (e) => {
   return false;
 });
 
+// form validation 
+// const nameError = document.getElementById('name-error');
+// const emailError = document.getElementById('email-error');
+// const phoneError = document.getElementById('phone-error');
+// const subjectError = document.getElementById('subject-error');
+// const messageError = document.getElementById('message-error');
+
+// function validateName() {
+//   contactName = document.getElementById('name').value;
+
+//   if (contactName.length == 0) {
+//     nameError.innerHTML = 'Name is reuired';
+//     return false;
+//   }
+
+//   if (!contactName.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+//     nameError.innerHTML = 'Enter full name';
+//     return false;
+//   }
+
+//   nameError.innerHTML = 'Correct name';
+//   return true;
+// }
+
 
 
 // contextmenu hide from website looks like professional
-document.addEventListener("contextmenu", (c)=>{
-   c.preventDefault();
-},false);
+// document.addEventListener("contextmenu", (c)=>{
+//    c.preventDefault();
+// },false);
 
 
 
@@ -168,7 +192,7 @@ const enableLightTheme = () => {
   document.body.classList.add('light-theme');
   themeIcon.src = 'Assets/moon.png';
   header.style.backgroundColor = 'rgba(255, 255, 255, 0.507)';
-  imageChange.src = 'Assets/lightprofile.png';
+  imageChange.src = 'Assets/web-dev-3d-image-white.png';
   blurLeft.style.background = 'linear-gradient(to right, #ffffff, transparent)';
   blurRight.style.background = 'linear-gradient(to right, transparent, #ffffff)';
   // titles.style.color = '#111827';
@@ -179,7 +203,7 @@ const disableLightTheme = () => {
   document.body.classList.remove('light-theme');
   themeIcon.src = 'Assets/sun.png';
   header.style.backgroundColor = 'rgba(0, 0, 0, 0.2)';
-  imageChange.src = 'Assets/darkprofile.png';
+  imageChange.src = 'Assets/web-dev-3d-image.png';
   blurLeft.style.background = 'linear-gradient(to right, #030712, transparent)';
   blurRight.style.background = 'linear-gradient(to right, transparent, #030712)';
   // titles.style.color = '#f9fafb';

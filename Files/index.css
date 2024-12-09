@@ -848,7 +848,7 @@ span {
 }
 
 .whatsapp-color {
-  color: #25D366;
+  color: #25D366; 
 }
 
 .linkedin-color {
@@ -907,11 +907,11 @@ span {
 }
 
 input:focus {
-    background-color: var(--secondary-bg-color);
+    background-color: var(--border-color);
 }
 
 #message:focus {
-    background-color: var(--secondary-bg-color);
+    background-color: var(--border-color);
 }
 
 .extra-text {
@@ -931,6 +931,23 @@ input:focus {
     text-align: center;
     font-size: 1.30rem;
 }
+.input-feild {
+    position: relative;
+}
+
+.validation {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    color: red;
+    font-size: 0.9rem;
+}
+
+.input-feild.name {
+    border-color: #2e8b57;
+}
+
+
 
 /* footer */
 
