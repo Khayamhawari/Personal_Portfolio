@@ -5,7 +5,21 @@
 //   }
 // })
 
-//animated text on header
+//preloader for website
+const preloader = document.getElementById('loader');
+window.addEventListener('load', () => {
+  preloader.style.display = 'none';
+});
+
+function showLoader() {
+  preloader.style.display = 'block';
+
+  setTimeout(() => {
+    preloader.style.display = 'none';
+  }, 1000);
+}
+
+//animated text on header -- type js
 const text = document.getElementById("text-change");
 
 const textLoad = () => {
@@ -76,68 +90,172 @@ const email = document.getElementById("email");
 const number = document.getElementById("number");
 const subject = document.getElementById("subject");
 const mess = document.getElementById("message");
+const submitBtn = document.getElementById("submitBtn");
 const url = 'https://script.google.com/macros/s/AKfycbwWI8CUe7uHygPKjQSqjNl8yh8iKuNNm6H05GAZgUV8dx-eBc0iGKwpKPIvpv_K6fWP/exec';
 
-function sendEmail() {
-  const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Whatsapp number: ${number.value}<br> Email Subject: ${subject.value}<br> Message: ${mess.value}<br>`;
 
-  Email.send({
-    SecureToken: "e8b9d532-1595-425b-a0a8-e53cd5d58e7c",
-    To: 'khayamthelinkbuilder@gmail.com',
-    From: "khayamthelinkbuilder@gmail.com",
-    Subject: subject.value,
-    Body: bodyMessage
-  }).then(
-    message => {
-      if (message == "OK") {
-        swal({
-          title: "Success!",
-          text: "Message sent sucessfully!",
-          icon: "success",
-          button: "OK",
-        });
-      }
-    }
-  );
-}
 
-form.addEventListener("submit", (e) => {
+submitBtn.addEventListener("click", (e) => {
+  if (!validateName() || !validateEmail() || !validatePhone() || !validateSubject() || !validateMessage()) {
+    finalSubmitError.style.display = 'block';
+    finalSubmitError.innerHTML = 'Please fill all required fields';
+
+    setTimeout(() => {
+      finalSubmitError.style.display = 'none';
+    }, 8000);
+    console.log('Something worng!');
+    return false;
+  }
+
   let d = new FormData(form);
   fetch(url, {
     method: "post",
     body: d
   }).then((res) => res.text()).then((finalData) => console.log(finalData));
 
-  e.preventDefault();
+  console.log("Submitted successfully");
+
+  function sendEmail() {
+    const bodyMessage = `Full Name: ${fullName.value}<br> Email: ${email.value}<br> Whatsapp number: ${number.value}<br> Email Subject: ${subject.value}<br> Message: ${mess.value}<br>`;
+
+    Email.send({
+      SecureToken: "e8b9d532-1595-425b-a0a8-e53cd5d58e7c",
+      To: 'khayamthelinkbuilder@gmail.com',
+      From: "khayamthelinkbuilder@gmail.com",
+      Subject: subject.value,
+      Body: bodyMessage
+    }).then(
+      message => {
+        if (message == "OK") {
+          swal({
+            title: "Success!",
+            text: "Message sent sucessfully!",
+            icon: "success",
+            button: "OK",
+          });
+        }
+      }
+    );
+  }
   sendEmail();
+  e.preventDefault();
+  console.log("Message sent on email successfully");
 
   form.reset();
   return false;
 });
 
 // form validation 
-// const nameError = document.getElementById('name-error');
-// const emailError = document.getElementById('email-error');
-// const phoneError = document.getElementById('phone-error');
-// const subjectError = document.getElementById('subject-error');
-// const messageError = document.getElementById('message-error');
+const nameError = document.getElementById('name-error');
+const emailError = document.getElementById('email-error');
+const phoneError = document.getElementById('phone-error');
+const subjectError = document.getElementById('subject-error');
+const messageError = document.getElementById('message-error');
+const finalSubmitError = document.getElementById('finalErrorMess');
 
-// function validateName() {
-//   contactName = document.getElementById('name').value;
+function validateName() {
+  var contactName = document.getElementById('name').value;
+  var nameFeild = document.getElementById('name');
+  if (contactName.length == 0) {
+    nameError.innerHTML = 'Name is reuired';
+    nameFeild.style.borderColor = 'red';
+    // contactName.style.borderColor = 'red';
+    return false;
+  }
 
-//   if (contactName.length == 0) {
-//     nameError.innerHTML = 'Name is reuired';
-//     return false;
-//   }
+  if (!contactName.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/) && !contactName.match(/^[A-Za-z]*\s{1}[A-Za-z]*\s{1}[A-Za-z]*$/)) {
+    nameError.innerHTML = 'Enter full name';
+    nameFeild.style.borderColor = 'red';
+    return false;
+  }
 
-//   if (!contactName.match(/^[A-Za-z]*\s{1}[A-Za-z]*$/)) {
-//     nameError.innerHTML = 'Enter full name';
-//     return false;
-//   }
+  nameError.innerHTML = '';
+  nameFeild.style.borderColor = '#00abf0';
+  return true;
+}
 
-//   nameError.innerHTML = 'Correct name';
-//   return true;
-// }
+function validateEmail() {
+  var contactEmail = document.getElementById('email').value;
+  var emailFeild = document.getElementById('email');
+
+  if (contactEmail.length == 0) {
+    emailError.innerHTML = 'Email is reuired';
+    emailFeild.style.borderColor = 'red';
+    return false;
+  }
+
+  if (!contactEmail.match(/^[A-Za-z\._\-0-9]*[@][A-Za-z]*[\.][a-z]{2,4}$/)) {
+    emailError.innerHTML = 'Enter a valid email';
+    emailFeild.style.borderColor = 'red';
+    return false;
+  }
+
+  emailError.innerHTML = '';
+  emailFeild.style.borderColor = '#00abf0';
+  return true;
+}
+
+function validatePhone() {
+  var contactPhone = document.getElementById('number').value;
+  var phoneFeild = document.getElementById('number');
+
+  if (contactPhone.length == 0) {
+    phoneError.innerHTML = 'Phone no is reuired';
+    phoneFeild.style.borderColor = 'red';
+    return false;
+  }
+  if (contactPhone.length !== 10) {
+    phoneError.innerHTML = 'Phone no should be 10 digits';
+    phoneFeild.style.borderColor = 'red';
+    return false;
+  }
+
+  if (!contactPhone.match(/^[0-9]{10}$/)) {
+    phoneError.innerHTML = 'Enter a valid phone no';
+    phoneFeild.style.borderColor = 'red';
+    return false;
+  }
+
+  phoneError.innerHTML = '';
+  phoneFeild.style.borderColor = '#00abf0';
+  return true;
+}
+
+function validateSubject() {
+  var contactSubject = document.getElementById('subject').value;
+  var subjectFeild = document.getElementById('subject');
+
+  if (contactSubject.length == 0) {
+    subjectError.innerHTML = 'Subject is reuired';
+    subjectFeild.style.borderColor = 'red';
+    return false;
+  }
+
+  subjectError.innerHTML = '';
+  subjectFeild.style.borderColor = '#00abf0';
+  return true;
+}
+
+function validateMessage() {
+  var contactMess = document.getElementById('message').value;
+  var messageFeild = document.getElementById('message');
+
+  if (contactMess.length == 0) {
+    messageError.innerHTML = 'Message is reuired';
+    messageFeild.style.borderColor = 'red';
+    return false;
+  }
+  if (contactMess.length < 20) {
+    messageError.innerHTML = 'Message should be atleast 20 characters';
+    messageFeild.style.borderColor = 'red';
+    return false;
+  }
+  messageError.innerHTML = '';
+  messageFeild.style.borderColor = '#00abf0';
+  return true;
+
+}
+
 
 
 

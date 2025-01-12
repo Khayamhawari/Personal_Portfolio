@@ -21,11 +21,10 @@
     .blur-left {
         left: -20%;
     }
-    
+
     .blur-right {
         right: -20%;
     }
-    
 }
 
 @media screen and (max-width: 840px) {
@@ -98,7 +97,7 @@
     }
 
     .main-nav a {
-        font-size: 1.50rem;
+        font-size: 1.5rem;
         margin-top: -15px;
     }
 
@@ -140,11 +139,10 @@
     .blur-left {
         left: -31%;
     }
-    
+
     .blur-right {
         right: -31%;
     }
-
 }
 
 @media screen and (max-width: 768px) {
@@ -153,7 +151,7 @@
     }
 
     .animate-text .text-change {
-        font-size: 1.40rem;
+        font-size: 1.4rem;
     }
 
     .education-row {
@@ -198,7 +196,7 @@
     }
 
     .content h3 {
-        font-size: 1.20rem;
+        font-size: 1.2rem;
     }
 
     .content p {
@@ -206,11 +204,11 @@
     }
 
     .skills-column .title {
-        font-size: 1.50rem;
+        font-size: 1.5rem;
     }
 
     .education-columns .title {
-        font-size: 1.50rem;
+        font-size: 1.5rem;
     }
 
     .skills-row {
@@ -223,11 +221,11 @@
     }
 
     .progress h3 {
-        font-size: 1.20rem;
+        font-size: 1.2rem;
     }
 
     .cards-content h3 {
-        font-size: 1.10rem;
+        font-size: 1.1rem;
     }
 
     .cards-content p {
@@ -239,13 +237,13 @@
     }
 
     .heading {
-        font-size: 2.50rem;
+        font-size: 2.5rem;
     }
 
     .blur-left {
         left: -33%;
     }
-    
+
     .blur-right {
         right: -33%;
     }
@@ -253,6 +251,26 @@
     .spc-heading {
         font-size: 2rem;
     }
+
+    .last-btn {
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 752px) {
+    /* header {
+        top: 9%;
+    } */
+
+    .top-update h3 {
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 677px) {
+    /* header {
+        top: 9%;
+    } */
 }
 
 @media screen and (max-width: 530px) {
@@ -293,17 +311,30 @@
     .blur-left {
         left: -32%;
     }
-    
+
     .blur-right {
         right: -34%;
     }
 
     .spc-heading {
-        font-size: 1.80rem;
+        font-size: 1.8rem;
     }
 }
 
 @media screen and (max-width: 479px) {
+    /* header {
+        top: 6.5%;
+    } */
+
+    .top-update {
+        padding: 10px 30px;
+        gap: 5px;
+    }
+
+    .top-update h3 {
+        font-size: 0.8rem;
+    }
+
     section {
         padding: 110px 40px 50px;
     }
@@ -321,12 +352,12 @@
     }
 
     .home-content .animate-text h3 {
-        font-size: 1.20rem;
+        font-size: 1.2rem;
     }
 
     .home-content p {
         font-size: 0.9rem;
-        line-height: 1.50rem;
+        line-height: 1.5rem;
     }
 
     .heading {
@@ -348,11 +379,11 @@
     }
 
     .animate-text .text-change {
-        font-size: 1.10rem;
+        font-size: 1.1rem;
     }
 
     .animate-text h2 {
-        font-size: 1.10rem;
+        font-size: 1.1rem;
     }
 
     .btn-3 {
@@ -413,7 +444,7 @@
     .blur-left {
         left: -19%;
     }
-    
+
     .blur-right {
         right: -19%;
     }
@@ -434,7 +465,7 @@
 
     .col-1-image p {
         font-size: 0.9rem;
-        line-height: 1.10rem;
+        line-height: 1.1rem;
     }
 }
 
@@ -448,7 +479,7 @@
     } */
 
     .logo {
-        font-size: 1.40rem;
+        font-size: 1.4rem;
     }
 
     header {
@@ -456,11 +487,11 @@
     }
 
     .main-nav a {
-        font-size: 1.20rem;
+        font-size: 1.2rem;
     }
 
     .heading {
-        font-size: 1.80rem;
+        font-size: 1.8rem;
     }
 
     .home-area {
@@ -482,7 +513,7 @@
     }
 
     .home-media-icons a {
-        font-size: 1.20rem;
+        font-size: 1.2rem;
     }
 
     .home-media-icons a i {
@@ -509,7 +540,7 @@
     }
 
     .education-columns .title {
-        font-size: 1.20rem;
+        font-size: 1.2rem;
     }
 
     .education-content::before {
@@ -530,7 +561,7 @@
     }
 
     .skills-column .title {
-        font-size: 1.20rem;
+        font-size: 1.2rem;
     }
 
     .skills-column {
@@ -550,7 +581,7 @@
     }
 
     .input-box {
-        gap: 0;
+        gap: 10px;
     }
 
     .input-feild input,
@@ -563,7 +594,7 @@
     }
 
     .main-footer h2 {
-        font-size: 1.50rem;
+        font-size: 1.5rem;
     }
 
     .footer-links {
@@ -579,7 +610,7 @@
     }
 
     .footer-social a {
-        font-size: 1.20rem;
+        font-size: 1.2rem;
     }
 
     .footer-social a i {
@@ -596,7 +627,6 @@
     }
 
     .spc-heading {
-        font-size: 1.60rem;
+        font-size: 1.6rem;
     }
-
 }

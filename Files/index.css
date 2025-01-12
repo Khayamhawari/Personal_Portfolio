@@ -18,6 +18,7 @@ body {
 
 body {
     background: var(--primary-bg-color);
+    /* position: relative; */
 }
 
 
@@ -43,7 +44,44 @@ p {
     align-items: center;
 }
 
+/* top update start */
+.top-update {
+    position: fixed;
+    top: 0%;
+    background: var(--main-color);
+    /* color: var(--primary-bg-color); */
+    padding: 10px 90px;
+    width: 100%;
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    z-index: 1000;
+}
+
+.top-update h3 {
+    color: var(--text-color);
+    font-weight: 600;
+    font-size: 1rem;
+    /* margin-left: 310px; */
+}
+
+.top-cross-icon {
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+
 /* Header Area Strat */
+#loader {
+    background: #030712 url(/Assets/preloader-testing.gif) no-repeat center;
+    background-size: 40px;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999;
+}
 
 ::-webkit-scrollbar {
     display: none;
@@ -509,7 +547,7 @@ span {
 }
 
 .content .bullet-points {
-  list-style: inside;
+    list-style: inside;
 }
 
 .slide-box {
@@ -848,7 +886,7 @@ span {
 }
 
 .whatsapp-color {
-  color: #25D366; 
+    color: #25D366;
 }
 
 .linkedin-color {
@@ -879,7 +917,7 @@ span {
     position: relative;
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 12px;
 }
 
 .input-feild {
@@ -924,13 +962,15 @@ input:focus {
 
 .last-btn {
     width: 150px;
-    margin: 10px auto 40px;
+    margin: 16px auto 40px;
+   
 }
 
 .btn-last {
     text-align: center;
     font-size: 1.30rem;
 }
+
 .input-feild {
     position: relative;
 }
@@ -938,15 +978,30 @@ input:focus {
 .validation {
     position: absolute;
     top: 100%;
-    left: 0;
+    left: 1%;
     color: red;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
+}
+
+.spc-style {
+    top: 98%;
 }
 
 .input-feild.name {
     border-color: #2e8b57;
 }
 
+.extra-text {
+    position: relative;
+}
+
+#finalErrorMess {
+    color: red;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 100%;
+    left: 1%;
+}
 
 
 /* footer */
